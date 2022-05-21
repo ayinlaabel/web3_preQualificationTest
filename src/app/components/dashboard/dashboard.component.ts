@@ -52,7 +52,7 @@ export class DashboardComponent implements OnInit {
       this.user.tier = this.tiers.tier2;
       
     } else if (this.tier === "tier3") {
-      this.user.tier = this.tiers.tier2;
+      this.user.tier = this.tiers.tier3;
     }
 
     this.total = this.total + this.user.tier['amount'];

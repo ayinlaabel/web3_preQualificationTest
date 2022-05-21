@@ -48,7 +48,7 @@
                     <td>{{ user.name }}</td>
                     <td>{{ user.tier.amount }}</td>
                     <td>{{ user.tier.percentage }} %</td>
-                    <td>{{ user.withdrawal }}</td>
+                    <td>{{ (user.tier.percentage / 100) * total }}</td>
                 </tr>
             </table>
         </div>
