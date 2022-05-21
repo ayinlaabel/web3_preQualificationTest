@@ -16,22 +16,21 @@ export class DashboardComponent implements OnInit {
     id: "",
     name: "",
     tier:{},
-    percentage: "",
     withdrawal: "",
   };
 
   tiers = {
     tier1: {
       amount: 10000,
-      percentage: '7%'
+      percentage: '7'
     },
     tier2: {
       amount: 20000,
-      percentage: '12%'
+      percentage: '12'
     },
     tier3: {
       amount: 30000,
-      percentage: '25%'
+      percentage: '25'
     },
   }
 
@@ -57,9 +56,11 @@ export class DashboardComponent implements OnInit {
     }
 
     this.total = this.total + this.user.tier['amount'];
-    this.users.push(this.user);
+    
+    this.withdraw = (this.user.tier.percentage / 100) * this.total;
+    this.user.withdrawal = Math.floor(this.withdraw);
 
-    this.withdraw = 0;
+    this.users.push(this.user);
     console.log(this.users);
 
     this.user = {};
