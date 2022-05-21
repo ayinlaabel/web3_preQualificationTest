@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+$primary-color: #00b3ff;
+$success: #017d09;
+$danger: #ab0000;
+$warning: #f0e405;
+$info: #085a8c;
+
+$bg: #fcfcfc;
+
+
+
+html,
+body {
+    font-family: 'Montserrat', 'Lato', sans-serif;
+    background: $bg;
+}
+
+.bg-success{
+    background: $success;
+}
+
+.bg-danger{
+    background: $danger;
+}
+.bg-info{
+    background: $info;
+}
+
+.bg-warning{
+    background: $warning;
+}
