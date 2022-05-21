@@ -1,3 +1,56 @@
 <div class="centered-container">
-    
+    <div class="header__container">
+        <div class="dashboard">
+            <div class="dashboard__container bg-success">
+                <h3>Total Amount</h3>
+                <p>{{ total | currency: 'NGN'}}</p>
+            </div>
+            <div class="dashboard__container bg-danger">
+                <h3>Total Amount</h3>
+                <p></p>
+            </div>
+            <div class="dashboard__container bg-info">
+                <h3>Total Amount</h3>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div class="data__container">
+        <div class="data__form">
+            <h3>Members Registration</h3>
+            <form>
+                <div class="input__field">
+                    <input [(ngModel)]="name" type="text" name="name" placeholder="Full Name">
+                </div>
+                <div class="input__field">
+                    <select [(ngModel)]="tier" name="tier">
+                        <option selected="selected">--- Select Tier ---</option>
+                        <option value="tier1">Tier 1 - {{ 10000 | currency:'NGN':'code'}}</option>
+                        <option value="tier2">Tier 2 - {{ 20000 | currency:'NGN':'code'}}</option>
+                        <option value="tier3">Tier 3 - {{ 30000 | currency:'NGN':'code'}}</option>
+                    </select>
+                </div>
+                <button (click)="register()">Submit</button>
+            </form>
+        </div>
+
+        <div class="data__table">
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Tier</th>
+                    <th>Week %</th>
+                    <th>Weekly Withdrawal</th>
+                </tr>
+                <tr *ngFor="let user of users">
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.tier.amount }}</td>
+                    <td>{{ user.tier.percentage }}</td>
+                    <td>700</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </div>
