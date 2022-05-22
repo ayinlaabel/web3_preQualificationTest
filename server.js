@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-
 app.use(express.static(__dirname + "/dist/web3"));
 
 app.get("/*", function (req, res) {
